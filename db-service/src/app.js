@@ -28,6 +28,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+    res.json("server for blinkify")
+})
+
 connectDB();
 
 app.use('/api/products', productRoutes);
